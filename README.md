@@ -1,0 +1,2 @@
+# sman
+spin manager
