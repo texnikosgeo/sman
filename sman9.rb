@@ -1,3 +1,46 @@
+#!/usr/bin/ruby
+
+#spin manager V2.11
+puts "RUBY_VERSION:", RUBY_VERSION
+
+teamA = 1, 7, 13, 19
+teamB = 2, 8, 14, 20
+teamC = 3, 9, 15, 21
+teamD = 4, 10, 16, 22
+teamE = 5, 11, 17, 23
+teamF = 6, 12, 18, 24
+teamG = [0]
+
+spins = []
+f_step = []
+s_step = []
+t_step = []
+n_step =[]
+predict = []
+predictor = []
+
+bek = true
+bet = false
+x = true
+
+while bet != "x"
+
+puts "give bet"
+bet = gets.chomp
+bek = bet.to_i
+spins << "#{bek}"
+
+    if  bek < 0 then puts ''
+    elsif teamA.include?(bek) then f_step << 1 
+    elsif teamB.include?(bek) then f_step << 2 
+    elsif teamC.include?(bek) then f_step << 3 
+    elsif teamD.include?(bek) then f_step << 4 
+    elsif teamE.include?(bek) then f_step << 5 
+    elsif teamF.include?(bek) then f_step << 6 
+    elsif teamG.include?(bek) then f_step << 7 
+
+    end
+
     if  bek < 0 then puts ''
     elsif f_step[-2..] == [4, 4] || f_step[-2..] == [4, 5]  || f_step[-2..] == [5, 4] || f_step[-2..] == [5, 6] || f_step[-2..] == [6, 5] || f_step[-2..] == [6, 7] || f_step[-2..] == [7, 6] then s_step << 1
     elsif f_step[-2..] == [1, 1] || f_step[-2..] == [3, 5]  || f_step[-2..] == [4, 6] || f_step[-2..] == [5, 7] || f_step[-2..] == [5, 3] || f_step[-2..] == [6, 4] || f_step[-2..] == [7, 5] then s_step << 2
