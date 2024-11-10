@@ -62,7 +62,7 @@ spins << "#{bek}"
     elsif s_step[-2..] == [1, 6] || s_step[-2..] == [2, 5]  || s_step[-2..] == [3, 4] || s_step[-2..] == [4, 3] || s_step[-2..] == [5, 2] || s_step[-2..] == [6, 1] || s_step[-2..] == [7, 7] then t_step << 7
 
     end
-predict << t_step.last
+
 
     if  bek < 0 then puts ''
     elsif t_step[-2..] == [4, 4] || t_step[-2..] == [4, 5]  || t_step[-2..] == [5, 4] || t_step[-2..] == [5, 6] || t_step[-2..] == [6, 5] || t_step[-2..] == [6, 7] || t_step[-2..] == [7, 6] then n_step << 1
@@ -75,7 +75,7 @@ predict << t_step.last
 
     end
 
-predict << n_step[-2..-2]
+
 
     if  bek < 0 then puts ''
     elsif predict.flatten[-2..] == [4, 4] || predict.flatten[-2..] == [4, 5]  || predict.flatten[-2..] == [5, 4] || predict.flatten[-2..] == [5, 6] || predict.flatten[-2..] == [6, 5] || predict.flatten[-2..] == [6, 7] || predict.flatten[-2..] == [7, 6] then predictor << teamA
